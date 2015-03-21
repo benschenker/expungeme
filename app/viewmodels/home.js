@@ -1,4 +1,5 @@
 define(["knockout", "durandal/app", "durandal/system"], function (ko, app, system) {
+    "use strict"
     var
         // Public Properties
         todos = ko.observableArray(),
