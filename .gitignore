@@ -21,3 +21,5 @@ publish/
 
 workspace/*
 pdftk/*
+*.c9
+*.log*
