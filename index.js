@@ -1,7 +1,12 @@
 var express = require('express');
-var app = express();
+var mappings = require('./mappings');
+var _ = require('lodash');
+var bodyParser = require('body-parser');
+var createPdf = require('./createPdf');
 
+var app = express();
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
@@ -9,10 +14,11 @@ app.get('/', function (req, res) {
 
 app.post('/create-pdf', function(req, res) {
 	var filledOutNames = getFilledOutNames(req);
-	var gettingFile = require('./createPdf')(filledOutNames);
+	console.log(JSON.stringify(filledOutNames));
+	var gettingFile = createPdf(filledOutNames);
 	gettingFile.then(function(file){
 		console.log("file created", file);
-		//TODO - Do Stuff here to return
+		res.download(file);
 	})
 });
 
@@ -27,9 +33,7 @@ var server = app.listen(3000, function () {
 
 
 function getFilledOutNames(req) {
-	//TODO - make this be not a stub
-	return {
-		"PARISH OF": "It's Orleans",
-		"JUDICIAL DISTRICT COURT": "Something with a gavel"
-	}
+	return _.object(_.map(req.body, function(v, k) {
+		return [mappings[k], v];
+	}));
 }
