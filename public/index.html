@@ -46,19 +46,19 @@
                     <form method="post" action="/create-pdf">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
-                            <input type="text" class="form-control" id="firstName" placeholder="Enter First Name">
+                            <input type="text" class="form-control" name="firstName" placeholder="Enter First Name">
                         </div>
                         <div class="form-group">
                             <label for="middleInitial">Middle Initial</label>
-                            <input type="text" class="form-control" id="middleInitial" placeholder="Enter Middle Initial">
+                            <input type="text" class="form-control" name="middleInitial" placeholder="Enter Middle Initial">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name</label>
-                            <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name">
+                            <input type="text" class="form-control" name="lastName" placeholder="Enter Last Name">
                         </div>
                         <div class="form-group">
                             <label for="dateOfBirth">Date of Birth</label>
-                            <input type="date" class="form-control" id="dateOfBirth" placeholder="Enter Date of Birth">
+                            <input type="date" class="form-control" name="dateOfBirth" placeholder="Enter Date of Birth">
                         </div>
                         <div class="form-group">
                             <label>
@@ -79,15 +79,23 @@
                         </div>
                         <div class="form-group">
                             <label for="race">Race</label>
-                            <input type="text" class="form-control" id="race" placeholder="Enter Race">
+                            <input type="text" class="form-control" name="race" placeholder="Enter Race">
                         </div>
                         <div class="form-group">
-                            <label for="sId">State Identification Number</label>
-                            <input type="text" class="form-control" id="sId" placeholder="Enter SID">
+                            <label for="liscenseNum">Driver's Liscense Number</label>
+                            <input type="text" class="form-control" name="liscenseNum" placeholder="Enter Liscense Number">
                         </div>
                         <div class="form-group">
                             <label for="last4SsnDigits">Last 4 Digits of Social Security Number</label>
-                            <input type="number" class="form-control" id="last4SsnDigits" placeholder="Enter Last 4 Digits of Your Social Security Number">
+                            <input type="number" class="form-control" name="last4SsnDigits" placeholder="Enter Last 4 Digits of Your Social Security Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="arrestingAgency">Arresting Agency</label>
+                            <input type="text" class="form-control" name="arrestingAgency" placeholder="Enter Arresting Agency">
+                        </div>
+                        <div class="form-group">
+                            <label for="dateOfArrest">Date of Arrest</label>
+                            <input type="date" class="form-control" name="dateOfArrest" placeholder="Enter Date of Arrest">
                         </div>
                         <button type="submit" class="btn btn-default">Submit</button>
                     </form>
