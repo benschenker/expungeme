@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
 app.post('/create-pdf', function(req, res) {
 	var filledOutNames = getFilledOutNames(req);
-	var gettingFile = require('./create-pdf')(filledOutNames);
+	var gettingFile = require('./createPdf')(filledOutNames);
 	gettingFile.then(function(file){
 		console.log("file created", file);
 		//TODO - Do Stuff here to return
