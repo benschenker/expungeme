@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -15,9 +15,11 @@
   "bugs": {
     "url": "https://github.com/benschenker/expungeme/issues"
   },
+ "scripts": {
+    "start": "node index.js"
+ },
   "homepage": "https://github.com/benschenker/expungeme",
   "dependencies": {
-    "bower": "^1.3.12",
     "express": "^4.12.3"
   }
 }
